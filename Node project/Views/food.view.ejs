@@ -13,8 +13,8 @@
             <div class="card">
                 <img src="/Imgs/<%= food[i].id %>.png" alt="Food Image">
                 <h2><%=food[i].name%></h2>
-                <p class="price">Price: <%=food[i].price%></p>
                 <p class="description"><%=food[i].description%></p>
+                <p class="price">$<%=food[i].price%></p>
                 <%if(food[i].availability == "Yes"){%>
                     <p class="avl">Available</p>
                 <%}else{%>
@@ -22,10 +22,12 @@
                 <%}%>
                 <div class="button-group">
                     <button onclick="">Edit Item</button>
-                    <button class="delete-btn" onclick="">Delete Item</button>
+                    <button class="delete-btn" onclick="deleteFood('<%= food[i]._id %>')">Delete Item</button>
                 </div>
             </div>
         <%}%>
     </div>
+    <script src="/Scripts/delete.js"></script>
+    
 </body>
 </html>

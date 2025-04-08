@@ -18,8 +18,16 @@ const setFood = async (req, res) => {
     await food.save(); 
     res.json(food); 
 }
+const deleteFood = async (req, res) => {
+    const food = await Food.findByIdAndDelete(req.params.id); 
+    if(!food) {
+        return res.status(404).json({error: 'Food not found'}); 
+    }
+    res.json(food); 
+}
 
 module.exports = {
     getAllFood,
-    setFood
+    setFood,
+    deleteFood
 };
