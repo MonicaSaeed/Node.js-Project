@@ -1,0 +1,14 @@
+id,name,price,description,availability
+F001,Avocado Toast,6.99,Toasted sourdough with smashed avocado and chili flakes,Yes
+F002,Breakfast Burrito,7.99,Stuffed with eggs-cheese-beans and salsa,Yes
+F003,Grilled Cheese,5.49,Cheddar and mozzarella on sourdough,No
+F004,Turkey Sandwich,8.50,Roasted turkey with lettuce and tomato on ciabatta,Yes
+F005,Quiche Lorraine,6.25,Bacon-cheese-and egg baked in a buttery crust,Yes
+F006,Caprese Salad,7.50,Fresh mozzarella-tomatoes-and basil drizzled with balsamic,Yes
+F007,Chicken Caesar Salad,8.00,Grilled chicken with romaine and Caesar dressing,Yes
+F008,Vegetable Stir Fry,9.00,Seasonal vegetables sautéed with soy sauce and sesame oil,Yes
+F009,Beef Tacos,8.50,Soft corn tortillas filled with seasoned beef and toppings,Yes
+F010,Spaghetti Aglio e Olio,10.00,Spaghetti with garlic-olive oil-and chili flakes,Yes
+F011,Margherita Pizza,11.00,Classic pizza with tomato sauce-mozzarella-and basil,Yes
+F012,BBQ Chicken Pizza,12.00,BBQ sauce-chicken-red onions-and cilantro,Yes
+F013,Seafood Paella,15.00,Spanish rice dish with shrimp-mussels-and saffron,No

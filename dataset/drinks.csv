@@ -1,0 +1,11 @@
+id,name,price,description,availability
+D001,Espresso,2.50,Rich and bold single shot espresso,Yes
+D002,Latte,3.75,Steamed milk with espresso,Yes
+D003,Cappuccino,3.50,Foamy milk and strong espresso,Yes
+D004,Matcha Latte,4.25,Green tea matcha with steamed milk,No
+D005,Iced Americano,3.00,Cold water over espresso,Yes
+D006,Chai Latte,3.50,Spiced tea with steamed milk,Yes
+D007,Hot Chocolate,3.00,Rich chocolate drink with whipped cream,Yes
+D008,Mocha,4.00,Espresso with chocolate and steamed milk,Yes
+D009,Turmeric Latte,4.00,Spiced turmeric drink with steamed milk,No
+D010,Affogato,5.00,Scoop of ice cream with espresso poured over,Yes 

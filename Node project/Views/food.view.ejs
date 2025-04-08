@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link rel="stylesheet" href="/Styles/food-view-style.css">    
+</head>
+<body>
+    <h1>Food menu</h1>
+    <div class="cards">
+        <%for(let i=0; i< food.length; i++){%>
+            <div class="card">
+                <img src="/Imgs/<%= food[i].id %>.png" alt="Food Image">
+                <h2><%=food[i].name%></h2>
+                <p class="price">Price: <%=food[i].price%></p>
+                <p class="description"><%=food[i].description%></p>
+                <%if(food[i].availability == "Yes"){%>
+                    <p class="avl">Available</p>
+                <%}else{%>
+                    <p class="notavl">Not Available</p>
+                <%}%>
+                <div class="button-group">
+                    <button onclick="">Edit Item</button>
+                    <button class="delete-btn" onclick="">Delete Item</button>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</body>
+</html>

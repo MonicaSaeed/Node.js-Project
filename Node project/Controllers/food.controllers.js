@@ -4,7 +4,10 @@ const foodValidator = require('../Utils/food.utils.js');
 
 const getAllFood = async (req, res) => {
     const food = await Food.find(); 
-    res.json(food); 
+    if(!food) {
+        return res.status(404).json({error: 'No food found'}); 
+    }
+    res.status(200).render('food.view.ejs', {food}); 
 };
 const setFood = async (req, res) => {
     const valid = foodValidator(req.body); // validate request body

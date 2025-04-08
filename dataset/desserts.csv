@@ -1,0 +1,14 @@
+id,name,price,description,availability
+DS001,Chocolate Croissant,3.25,Flaky pastry with rich chocolate filling,Yes
+DS002,Cheesecake,4.75,Classic New York style with graham crust,Yes
+DS003,Tiramisu,5.50,Layers of espresso-soaked ladyfingers and mascarpone,No
+DS004,Macaron Pack,6.00,Assorted French macarons (5 pieces),Yes
+DS005,Banana Bread,3.75,Moist and lightly sweet banana loaf,Yes
+DS006,Apple Pie,4.50,Homemade pie with spiced apple filling,Yes
+DS007,Chocolate Cake,5.00,Rich and moist chocolate layer cake,Yes
+DS008,Lemon Tart,4.25,Tart with zesty lemon filling and meringue,Yes
+DS009,Red Velvet Cake,5.50,Velvety cake with cream cheese frosting,No
+DS010,Carrot Cake,4.75,Spiced cake with cream cheese frosting,Yes
+DS011,Ice Cream Sundae,6.50,Scoop of ice cream with toppings,Yes
+DS012,Profiteroles,5.00,Choux pastry filled with cream and chocolate sauce,Yes
+

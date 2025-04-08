@@ -10,6 +10,7 @@ const express = require('express'); // import express
 const app = express(); // create express instance
 const bodyParser = require('body-parser'); // import body-parser
 const PORT = process.env.PORT || 7100; // set port
+app.use(express.static(__dirname+"/Public"));
 //#endregion
 
 //#region middleware
