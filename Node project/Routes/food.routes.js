@@ -1,12 +1,14 @@
 const express = require('express'); 
 let router = express.Router(); 
 
-const studentController = require('../Controllers/food.controllers.js');
+const foodController = require('../Controllers/food.controllers.js');
 
-router.get('/', studentController.getAllFood); 
-router.post('/', studentController.setFood); 
-router.delete('/:id', studentController.deleteFood);
-router.get('/:id', studentController.getFoodById);
-router.put('/', studentController.updateFood);
+router.get('/', foodController.getAllFood); 
+router.post('/', foodController.setFood); 
+router.delete('/:id', foodController.deleteFood);
+router.get('/add', foodController.addPage); // it must be before the getFoodById route to avoid conflict 
+router.get('/:id', foodController.getFoodById);
+router.put('/', foodController.updateFood);
+router.post('/add', foodController.addFood);
 
 module.exports = router; 

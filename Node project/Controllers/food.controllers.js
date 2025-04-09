@@ -58,10 +58,35 @@ const updateFood = async (req, res) => {
     food.save();
     res.status(200).render('food-update.view.ejs', {food});
 }
+const addPage = async (req, res) => {
+    res.render('food-add.view.ejs'); 
+}
+const addFood = async (req, res) => {
+    const newFood = {
+        id: req.body.id,
+        name: req.body.name,
+        description: req.body.description,
+        price: parseFloat(req.body.price),
+        availability: req.body.availability
+    };
+
+    const valid = foodValidator(newFood);
+    
+    if (!valid) {
+        return res.status(400).json({ error: foodValidator.errors });
+    }
+
+    const food = new Food(newFood); 
+    await food.save(); 
+    res.status(200).redirect('/food'); 
+}
+
 module.exports = {
     getAllFood,
     getFoodById,
     setFood,
     deleteFood,
-    updateFood
+    updateFood,
+    addPage,
+    addFood
 };
