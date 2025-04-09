@@ -22,8 +22,8 @@ app.use(bodyParser.urlencoded()); // use body-parser to parse urlencoded data
 const DBListener = require('./Models/DB.js').DBListener; 
 DBListener.once('open',()=>{
     //#region handle all requests [end points]
-    app.get('/', (req, res) => {
-        res.send('Hello World!'); // send response
+    app.get(['/','/resturant','/main'], (req, res) => {
+        res.render('main.view.ejs'); 
     });
     const foodRoutes = require('./Routes/food.routes.js');
     app.use('/food', foodRoutes);  

@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
     <link rel="stylesheet" href="/Styles/food-view-style.css">    
+    <link rel="icon" href="/Icons/foodIcon.png" type="image/png">
 </head>
 <body>
     <h1>Food menu</h1>
+    <div class="add-food">
+        <button onclick="">Add Item</button>
+    </div>
     <div class="cards">
         <%for(let i=0; i< food.length; i++){%>
             <div class="card">
@@ -22,7 +26,7 @@
                 <%}%>
                 <div class="button-group">
                     <button onclick="">Edit Item</button>
-                    <button class="delete-btn" onclick="deleteFood('<%= food[i]._id %>')">Delete Item</button>
+                    <button class="delete-btn" onclick="deleteFood('<%= food[i].id %>')">Delete Item</button>
                 </div>
             </div>
         <%}%>

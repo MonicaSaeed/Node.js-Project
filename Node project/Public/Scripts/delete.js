@@ -2,10 +2,7 @@ async function deleteFood(id) {
     if (!confirm("Are you sure you want to delete this item?")) return;
     try {
         const response = await fetch(`/food/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            method: 'DELETE'
         });
         if (response.ok) {
             alert("Item deleted successfully!");
