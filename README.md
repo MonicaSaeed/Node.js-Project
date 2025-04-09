@@ -45,13 +45,13 @@ This is a simple Node.js web application that provides a user-friendly interface
 
 ## 🖼️ Screenshots
 
-### 🔹 Home Page – Food Menu
+### 🔹 Welcome Page
 ![Image](https://github.com/user-attachments/assets/d60cc22a-f57d-43fc-bbb4-f0b02f86d7ba)  
 ➡️ [http://localhost:7100/](http://localhost:7100/)
 
 ---
 
-### 🔹 Add New Food Item
+### 🔹 Food Menu
 ![Image](https://github.com/user-attachments/assets/ebcef6fd-91f9-4c48-b3c4-f74ac07fe29a)  
 ➡️ [http://localhost:7100/food](http://localhost:7100/food)
 
