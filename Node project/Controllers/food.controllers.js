@@ -9,6 +9,13 @@ const getAllFood = async (req, res) => {
     }
     res.status(200).render('food.view.ejs', {food}); 
 };
+const getFoodById = async (req, res) => {
+    const food = await Food.findOne({id: req.params.id}); 
+    if(!food) {
+        return res.status(404).json({error: 'Food not found'}); 
+    }
+    res.render('food-update.view.ejs', {food});
+};
 const setFood = async (req, res) => {
     const valid = foodValidator(req.body); // validate request body
     if (!valid) {
@@ -23,11 +30,37 @@ const deleteFood = async (req, res) => {
     if(!food) {
         return res.status(404).json({error: 'Food not found'}); 
     }
-    res.json(food); 
+    res.status(200).json({message: 'Food deleted successfully'}); 
 }
-
+const updateFood = async (req, res) => {
+    let price = parseFloat(req.body.price);
+    let newFood ={
+        id: req.body.id,
+        name: req.body.name,
+        description: req.body.description,
+        price: price,
+        availability: req.body.availability
+    }
+    const valid = foodValidator(newFood); // validate request body
+    if (!valid) {
+        return res.status(400).json({error: foodValidator.errors}); 
+    }
+    const food = await Food.findOne({id: req.body.id});
+    if(!food) {
+        return res.status(404).json({error: 'Food not found'}); 
+    }
+    food.id = req.body.id;
+    food.name = req.body.name;
+    food.description = req.body.description;
+    food.price = price;
+    food.availability = req.body.availability;
+    food.save();
+    res.status(200).render('food-update.view.ejs', {food});
+}
 module.exports = {
     getAllFood,
+    getFoodById,
     setFood,
-    deleteFood
+    deleteFood,
+    updateFood
 };
