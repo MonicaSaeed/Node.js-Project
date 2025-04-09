@@ -26,10 +26,11 @@ const setFood = async (req, res) => {
     res.json(food); 
 }
 const deleteFood = async (req, res) => {
-    const food = await Food.findByIdAndDelete(req.params.id); 
+    const food = await Food.findOne({id:req.params.id}); 
     if(!food) {
         return res.status(404).json({error: 'Food not found'}); 
     }
+    await Food.deleteOne({id:req.params.id});
     res.status(200).json({message: 'Food deleted successfully'}); 
 }
 const updateFood = async (req, res) => {
