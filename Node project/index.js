@@ -25,8 +25,12 @@ DBListener.once('open',()=>{
     app.get(['/','/resturant','/main'], (req, res) => {
         res.render('main.view.ejs'); 
     });
+
     const foodRoutes = require('./Routes/food.routes.js');
     app.use('/food', foodRoutes);  
+
+    const registerRoutes = require('./Routes/register.routes.js');
+    app.use('/register', registerRoutes);
     //#endregion
 }) 
 //#endregion

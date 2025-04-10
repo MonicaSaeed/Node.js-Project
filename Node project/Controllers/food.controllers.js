@@ -34,7 +34,6 @@ const deleteFood = async (req, res) => {
     res.status(200).json({message: 'Food deleted successfully'}); 
 }
 const updateFood = async (req, res) => {
-    console.log(req.body);
     let price = parseFloat(req.body.price);
     let newFood = {
         id: req.body.id,
@@ -44,7 +43,6 @@ const updateFood = async (req, res) => {
         availability: req.body.availability
     };
     const valid = foodValidator(newFood); // validate request body
-    console.log(valid);
     if (!valid) {
         return res.status(400).json({ error: foodValidator.errors });
     }

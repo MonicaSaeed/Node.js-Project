@@ -1,6 +1,6 @@
 # 🍽️ Node.js Restaurant Menu Project
 
-## 🚀 How to Run the Project
+## How to Run the Project
 1. **Download the food dataset**  
    Download [`food.csv`](https://github.com/user-attachments/files/19673557/food.csv)
 2. **Set up MongoDB**  
@@ -22,28 +22,28 @@
 
 This is a simple Node.js web application that provides a user-friendly interface to manage a restaurant menu. Built using Express.js and MongoDB, it follows the MVC (Model-View-Controller) architecture for a clean and maintainable structure.
 
-### ✨ Features
+### Features
 
-- 📃 View a list of all food items (name, description, price, availability, and image)
-- ➕ Add a new food item
-- 📝 Edit existing food items
-- ❌ Delete food items
+- View a list of all food items (name, description, price, availability, and image)
+- Add a new food item
+- Edit existing food items
+- Delete food items
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Node.js** – JavaScript runtime
 - **Express.js** – Backend web framework
 - **MongoDB** – NoSQL database
 - **EJS** – Templating engine for rendering views
 - **CSS** – Styling
-- **Vanilla JavaScript** – Frontend scripting
+- **JavaScript** – Frontend scripting
 - **MVC Pattern** – Separation of concerns for Models, Views, and Controllers
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### 🔹 Welcome Page
 ![Image](https://github.com/user-attachments/assets/d60cc22a-f57d-43fc-bbb4-f0b02f86d7ba)  
