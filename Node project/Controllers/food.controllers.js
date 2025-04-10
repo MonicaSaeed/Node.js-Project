@@ -34,19 +34,21 @@ const deleteFood = async (req, res) => {
     res.status(200).json({message: 'Food deleted successfully'}); 
 }
 const updateFood = async (req, res) => {
+    console.log(req.body);
     let price = parseFloat(req.body.price);
-    let newFood ={
+    let newFood = {
         id: req.body.id,
         name: req.body.name,
         description: req.body.description,
         price: price,
         availability: req.body.availability
-    }
+    };
     const valid = foodValidator(newFood); // validate request body
+    console.log(valid);
     if (!valid) {
-        return res.status(400).json({error: foodValidator.errors}); 
+        return res.status(400).json({ error: foodValidator.errors });
     }
-    const food = await Food.findOne({id: req.body.id});
+    let food = await Food.findOne({id: req.body.id});
     if(!food) {
         return res.status(404).json({error: 'Food not found'}); 
     }
@@ -55,23 +57,22 @@ const updateFood = async (req, res) => {
     food.description = req.body.description;
     food.price = price;
     food.availability = req.body.availability;
-    food.save();
+    await food.save();
     res.status(200).render('food-update.view.ejs', {food});
 }
 const addPage = async (req, res) => {
     res.render('food-add.view.ejs'); 
 }
 const addFood = async (req, res) => {
-    const newFood = {
+    let price = parseFloat(req.body.price);
+    let newFood = {
         id: req.body.id,
         name: req.body.name,
         description: req.body.description,
-        price: parseFloat(req.body.price),
+        price: price,
         availability: req.body.availability
     };
-
-    const valid = foodValidator(newFood);
-    
+    const valid = foodValidator(newFood); // validate request body
     if (!valid) {
         return res.status(400).json({ error: foodValidator.errors });
     }

@@ -6,6 +6,6 @@ const foodSchema = new mongoose.Schema({
     "price": Number,
     "description": String,
     "availability": String
-});
+}, {versionKey: false}); // remove __v field from schema
 const Food = mongoose.model('Foods', foodSchema, 'Foods'); 
 module.exports = Food; 
