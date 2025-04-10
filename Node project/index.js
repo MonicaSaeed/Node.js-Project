@@ -31,6 +31,9 @@ DBListener.once('open',()=>{
 
     const registerRoutes = require('./Routes/register.routes.js');
     app.use('/register', registerRoutes);
+
+    const loginRoutes = require('./Routes/login.routes.js');
+    app.use('/login', loginRoutes);
     //#endregion
 }) 
 //#endregion
