@@ -16,6 +16,16 @@ app.use(express.static(__dirname+"/Public"));
 //#region middleware
 app.use(bodyParser.json()); // use body-parser to parse json
 app.use(bodyParser.urlencoded()); // use body-parser to parse urlencoded data
+
+const session = require('express-session');
+const JWT_SECRET = process.env.JWT_SECRET || 'd6e6d4247ebbb001991a172e46570c56a913c97bb13b41c919dfc24e420b0c3c'; //generate secret with https://jwtsecret.com/generate
+app.use(session({
+    secret: JWT_SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
+
+
 //#endregion
 
 //#region mongoose connection
@@ -23,7 +33,7 @@ const DBListener = require('./Models/DB.js').DBListener;
 DBListener.once('open',()=>{
     //#region handle all requests [end points]
     app.get(['/','/resturant','/main'], (req, res) => {
-        res.render('main.view.ejs'); 
+        res.render('login.view.ejs'); 
     });
 
     const foodRoutes = require('./Routes/food.routes.js');

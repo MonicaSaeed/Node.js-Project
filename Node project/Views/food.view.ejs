@@ -10,7 +10,9 @@
 <body>
     <h1>Food menu</h1>
     <div class="add-food">
-        <button onclick="location.href='/food/add'">Add Item</button>
+        <% if (isAdmain) { %>
+            <button onclick="location.href='/food/add'">Add Item</button>
+        <% }%>
     </div>
     <div class="cards">
         <%for(let i=0; i< food.length; i++){%>
@@ -25,8 +27,10 @@
                     <p class="notavl">Not Available</p>
                 <%}%>
                 <div class="button-group">
-                    <button onclick="location.href='/food/<%= food[i].id %>'">Edit Item</button>
-                    <button class="delete-btn" onclick="deleteFood('<%= food[i].id %>')">Delete Item</button>
+                    <% if (isAdmain) { %>
+                        <button onclick="location.href='/food/<%= food[i].id %>'">Edit Item</button>
+                        <button class="delete-btn" onclick="deleteFood('<%= food[i].id %>')">Delete Item</button>
+                    <% } %>
                 </div>
             </div>
         <%}%>

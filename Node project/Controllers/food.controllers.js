@@ -7,7 +7,8 @@ const getAllFood = async (req, res) => {
     if(!food) {
         return res.status(404).json({error: 'No food found'}); 
     }
-    res.status(200).render('food.view.ejs', {food}); 
+    const isAdmain = req.session.isAdmain ;
+    res.status(200).render('food.view.ejs', { food, isAdmain });
 };
 const getFoodById = async (req, res) => {
     const food = await Food.findOne({id: req.params.id}); 

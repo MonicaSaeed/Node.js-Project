@@ -13,8 +13,16 @@ const loginUser = async (req, res) => {
     if (!validPassword) {
         return res.status(400).json({ error: 'Invalid Email/Password' });
     }
-    let token = await jwt.sign({ email: userFound.email, isAdmain: userFound.isAdmain }, JWT_SECRET); // can add -> { expiresIn: '24h' } to set expiration time
-    res.header('x-auth-token', token); 
-    res.status(200).json({ message: 'Login successful' }); 
+    // let token = await jwt.sign({ email: userFound.email, isAdmain: userFound.isAdmain }, JWT_SECRET); // can add -> { expiresIn: '24h' } to set expiration time
+    // res.header('x-auth-token', token); 
+
+
+    req.session.isAdmain = userFound.isAdmain;
+    req.session.user = {
+        email: userFound.email,
+        isAdmain: userFound.isAdmain
+    };
+    res.render('main.view.ejs'); 
+
 };
 module.exports = { loginUser };
