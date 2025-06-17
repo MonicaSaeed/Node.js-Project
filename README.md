@@ -95,13 +95,13 @@ This is a Node.js web application that provides a user-friendly interface for ma
 ---
 
 ### 🔹 Food Menu (User View)  
-![User View](https://github.com/user-attachments/assets/24372f32-0539-41f2-b694-8c28d1d34248)  
+![User View](https://github.com/user-attachments/assets/3da560a9-1b8b-4ac7-9abb-e5bc366f2c6e)  
 ➡️ [http://localhost:7100/food](http://localhost:7100/food)
 
 ---
 
 ### 🔹 Food Menu (Admin View)  
-![Admin View](https://github.com/user-attachments/assets/3da560a9-1b8b-4ac7-9abb-e5bc366f2c6e)  
+![Admin View](https://github.com/user-attachments/assets/24372f32-0539-41f2-b694-8c28d1d34248)  
 ➡️ [http://localhost:7100/food](http://localhost:7100/food)
 
 ---
